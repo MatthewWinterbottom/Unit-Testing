@@ -49,7 +49,7 @@ namespace Blog.Tests
         [Test]
         public void FolderExistsWithRelativePath()
         {
-            var folder = Directory.GetDirectories(@"C:\Users\Matthew\source\repos\Blog\Blog.Frontend\ClientApp\");
+            var folder = Directory.GetDirectories(@"../");
         }
     }
 }

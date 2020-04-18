@@ -35,7 +35,7 @@ namespace Blog
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/build";
+                configuration.RootPath = @"C:\Users\Matthew\source\repos\Blog\Blog.Frontend\ClientApp\build";
             });
 
             services.AddSimpleInjector(container, options =>
@@ -79,7 +79,7 @@ namespace Blog
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "ClientApp";
+                spa.Options.SourcePath = @"C:\Users\Matthew\source\repos\Blog\Blog.Frontend\ClientApp";
 
                 if (env.IsDevelopment())
                 {
