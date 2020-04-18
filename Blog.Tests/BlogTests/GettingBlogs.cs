@@ -33,7 +33,7 @@ namespace Blog.Tests
         }
 
         [Test]
-        public void BlogDatesAreCorrect()
+        public void BlogDatesAreNotNull()
         {
             Blogs.Select(blog => blog.DateCreated).Should().NotBeNull();
         }
@@ -44,12 +44,6 @@ namespace Blog.Tests
             var folder = Directory.Exists(@"C:\Users\Matthew\source\repos\Blog\Blog.Frontend");
 
             folder.Should().BeTrue();
-        }
-
-        [Test]
-        public void FolderExistsWithRelativePath()
-        {
-            var folder = Directory.GetDirectories(@"../");
         }
     }
 }
