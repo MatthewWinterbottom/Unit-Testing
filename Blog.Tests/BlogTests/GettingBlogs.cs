@@ -5,6 +5,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Blog.Tests
@@ -34,7 +35,21 @@ namespace Blog.Tests
         [Test]
         public void BlogDatesAreCorrect()
         {
-            Blogs.Select(blog => blog.DateCreated).Should();
+            Blogs.Select(blog => blog.DateCreated).Should().NotBeNull();
+        }
+
+        [Test]
+        public void FolderExists()
+        {
+            var folder = Directory.Exists(@"C:\Users\Matthew\source\repos\Blog\Blog.Frontend");
+
+            folder.Should().BeTrue();
+        }
+
+        [Test]
+        public void FolderExistsWithRelativePath()
+        {
+            var folder = Directory.GetDirectories(@"C:\Users\Matthew\source\repos\Blog\Blog.Frontend\ClientApp\");
         }
     }
 }
