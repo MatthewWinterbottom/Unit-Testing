@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Blog.Repository.DbModels;
+using Blog.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Blog.Controllers
 {
@@ -11,6 +12,13 @@ namespace Blog.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+
+        private readonly IDbReadService<BlogEntity> blogCRUDService;
+        public WeatherForecastController(IDbReadService<BlogEntity> blogCRUDService)
+        {
+            this.blogCRUDService = blogCRUDService;
+        }
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

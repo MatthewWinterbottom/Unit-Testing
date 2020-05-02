@@ -21,15 +21,11 @@ namespace Blog.IntegrationTests.BlogTests
 
         public async Task BlogControllerReturnsSuccessStatusCode(string url)
         {
-            // Arrange
-            HttpClient client = _factory.CreateClient(); // Get HttpClient For Making HTTP Requests
+            HttpClient client = _factory.CreateClient();
 
-            url = url.TrimControllerSuffix(); // Trim "Controller" off of the URL.
-
-            // Act
+            url = url.GetControllerName();
             var response = await client.GetAsync(url);
 
-            // Assert
             response.EnsureSuccessStatusCode();
         }
     }

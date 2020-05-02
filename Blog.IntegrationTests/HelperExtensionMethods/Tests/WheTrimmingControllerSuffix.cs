@@ -9,52 +9,40 @@ namespace Blog.IntegrationTests.HelperExtensionMethods
         [Fact]
         public void TheControllerSuffixIsRemoved()
         {
-            // Arrange
             var testString = "testController";
 
-            // Act
-            var resultString = testString.TrimControllerSuffix();
+            var resultString = testString.GetControllerName();
 
-            // Assert
             resultString.Should().Be("test");
         }
 
         [Fact]
         public void TheNullInputReturnsNull()
         {
-            // Arrange
             string nullString = null;
 
-            // Act
-            var result = nullString.TrimControllerSuffix();
+            var result = nullString.GetControllerName();
 
-            // Assert
             result.Should().Be(nullString);
         }
 
         [Fact]
         public void TheEmptyStringReturnsAnEmptyString()
         {
-            // Arrange
             var emptyString = string.Empty;
 
-            // Act
-            var result = emptyString.TrimControllerSuffix();
+            var result = emptyString.GetControllerName();
 
-            // Assert
             result.Should().Be(emptyString);
         }
 
         [Fact]
         public void TheStringWithoutControllerReturnsTheString()
         {
-            // Arrange
             string cowboyGreeting = "Howdy Partner!";
 
-            // Act
-            string result = cowboyGreeting.TrimControllerSuffix();
+            string result = cowboyGreeting.GetControllerName();
 
-            // Assert
             result.Should().Be(cowboyGreeting);
         }
     }
