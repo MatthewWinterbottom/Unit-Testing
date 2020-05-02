@@ -2,7 +2,6 @@
 using Blog.Models.ViewModels;
 using Blog.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 
 namespace Blog.Controllers
@@ -11,8 +10,8 @@ namespace Blog.Controllers
     [Route("[controller]")]
     public class BlogController : ControllerBase
     {
-        private readonly IBlogCRUDService blogCRUDService;
-        public BlogController(IBlogCRUDService blogCRUDService)
+        private readonly ICRUDService blogCRUDService;
+        public BlogController(ICRUDService blogCRUDService)
         {
             this.blogCRUDService = blogCRUDService;
         }

@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Blog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Matthew\\source\\repos\\Blog\\Blog", "Blog.Application.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Blog.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
