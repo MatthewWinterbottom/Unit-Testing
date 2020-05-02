@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Blog.Tests/1.0.0": {
         "dependencies": {
-          "Blog.Application": "1.0.0",
+          "Blog.Api": "1.0.0",
           "FluentAssertions": "5.10.3",
           "Microsoft.NET.Test.Sdk": "16.4.0",
           "MockQueryable.NSubstitute": "3.1.1",
@@ -2253,8 +2253,10 @@
           }
         }
       },
-      "Blog.Application/1.0.0": {
+      "Blog.Api/1.0.0": {
         "dependencies": {
+          "Blog.Repository": "1.0.0",
+          "Blog.Services": "1.0.0",
           "Microsoft.AspNetCore.SpaServices.Extensions": "3.1.3",
           "Microsoft.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
@@ -2263,7 +2265,25 @@
           "SimpleInjector.Integration.AspNetCore.Mvc.Core": "4.9.2"
         },
         "runtime": {
-          "Blog.Application.dll": {}
+          "Blog.Api.dll": {}
+        }
+      },
+      "Blog.Repository/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3"
+        },
+        "runtime": {
+          "Blog.Repository.dll": {}
+        }
+      },
+      "Blog.Services/1.0.0": {
+        "dependencies": {
+          "Blog.Repository": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.3"
+        },
+        "runtime": {
+          "Blog.Services.dll": {}
         }
       }
     }
@@ -3604,7 +3624,17 @@
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
-    "Blog.Application/1.0.0": {
+    "Blog.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

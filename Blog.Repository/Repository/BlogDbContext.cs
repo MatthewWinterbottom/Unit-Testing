@@ -1,5 +1,5 @@
 ﻿using System;
-using Blog.DbModels;
+using Blog.Repository.DbModels;
 using Blog.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,11 +10,11 @@ namespace Blog.Repository
 
         public BlogDbContext(DbContextOptions<BlogDbContext> options) : base(options)
         {
-            Blogs = Set<DbModels.Blog>();
+            Blogs = Set<BlogEntity>();
             Authors = Set<Author>();
         }
 
-        public DbSet<DbModels.Blog> Blogs { get; }
+        public DbSet<BlogEntity> Blogs { get; }
         public DbSet<Author> Authors { get; }
 
 
@@ -25,7 +25,7 @@ namespace Blog.Repository
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<DbModels.Blog>(b =>
+            modelBuilder.Entity<BlogEntity>(b =>
             {
                 b.HasKey(b => b.Id);
 

@@ -1,4 +1,5 @@
 ﻿using Blog.Models.ViewModels;
+using Blog.Repository.DbModels;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,7 +7,7 @@ namespace Blog.Mappings.ModelToViewModel
 {
     public static class BlogMapping
     {
-        public static IEnumerable<BlogViewModel> GetBlogViewModel(this IEnumerable<DbModels.Blog> blogs) =>
+        public static IEnumerable<BlogViewModel> GetBlogViewModel(this IEnumerable<BlogEntity> blogs) =>
              blogs.Select(blog => new BlogViewModel
              {
                  Id = blog.Id,

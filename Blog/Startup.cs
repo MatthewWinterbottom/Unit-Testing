@@ -1,16 +1,12 @@
 using Blog.Repository;
 using Blog.Repository.Interfaces;
-using Blog.Services;
-using Blog.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleInjector;
-using SimpleInjector.Integration.AspNetCore;
 
 namespace Blog
 {
@@ -44,8 +40,6 @@ namespace Blog
                     .AddAspNetCore()
                     .AddControllerActivation();
             });
-
-            services.AddScoped<IBlogCRUDService, BlogCRUDService>();
 
             services.AddDbContext<IBlogDbContext, BlogDbContext>();
         }

@@ -1,7 +1,7 @@
 ﻿using Blog.Controllers;
+using Blog.Repository.DbModels;
 using Blog.Repository.Interfaces;
 using Blog.Services;
-using Blog.Services.Interfaces;
 using Blog.Tests.MockData;
 using FluentAssertions;
 using MockQueryable.NSubstitute;
@@ -47,7 +47,7 @@ namespace Blog.Tests.BlogTests
             container.Register<IBlogDbContext>(() => mockBlogDbContext);
 
             // Register the CRUD blogservice for the IBlogCRUDService
-            container.Register<IBlogCRUDService, BlogCRUDService>();
+            container.Register<IDbReadService<BlogEntity>, ReadBlogsService>();
 
             // Instiantiate BlogController
             BlogController = container.GetInstance<BlogController>();

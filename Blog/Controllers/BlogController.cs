@@ -1,6 +1,7 @@
 ﻿using Blog.Mappings.ModelToViewModel;
 using Blog.Models.ViewModels;
-using Blog.Services.Interfaces;
+using Blog.Repository.DbModels;
+using Blog.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -10,8 +11,8 @@ namespace Blog.Controllers
     [Route("[controller]")]
     public class BlogController : ControllerBase
     {
-        private readonly ICRUDService blogCRUDService;
-        public BlogController(ICRUDService blogCRUDService)
+        private readonly IDbReadService<BlogEntity> blogCRUDService;
+        public BlogController(IDbReadService<BlogEntity> blogCRUDService)
         {
             this.blogCRUDService = blogCRUDService;
         }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Services", "Blog.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Api", "Blog\Blog.Api.csproj", "{3920CC4D-FD53-4DBC-92FC-CCE6DE70CF7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Repository", "Blog.Repository\Blog.Repository.csproj", "{B8894736-9101-48CC-9057-6C624FEE22D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3920CC4D-FD53-4DBC-92FC-CCE6DE70CF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3920CC4D-FD53-4DBC-92FC-CCE6DE70CF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3920CC4D-FD53-4DBC-92FC-CCE6DE70CF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8894736-9101-48CC-9057-6C624FEE22D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8894736-9101-48CC-9057-6C624FEE22D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8894736-9101-48CC-9057-6C624FEE22D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8894736-9101-48CC-9057-6C624FEE22D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Blog.DbModels;
 
-namespace Blog.DbModels
+namespace Blog.Repository.DbModels
 {
-    public class Blog
+    public class BlogEntity
     {
         public int Id { get; set; }
         public Author Author { get; set; }
