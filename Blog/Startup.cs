@@ -1,5 +1,7 @@
 using Blog.Repository;
+using Blog.Repository.DbModels;
 using Blog.Repository.Interfaces;
+using Blog.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
@@ -40,6 +42,8 @@ namespace Blog
                     .AddAspNetCore()
                     .AddControllerActivation();
             });
+
+            services.AddScoped<IDbReadService<BlogEntity>, ReadBlogsService>();
 
             services.AddDbContext<IBlogDbContext, BlogDbContext>();
         }
