@@ -9,15 +9,23 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleInjector;
+using System;
+using System.IO;
 
 namespace Blog
 {
     public class Startup
     {
         private readonly Container container = new Container();
+        private readonly string solutionDirectoryFilePath;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            var currentDirectory = Environment.CurrentDirectory;
+
+            solutionDirectoryFilePath = Directory.GetParent(currentDirectory).FullName;
         }
 
         public IConfiguration Configuration { get; }
@@ -25,7 +33,6 @@ namespace Blog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             container.Options.ResolveUnregisteredConcreteTypes = true;
 
             services.AddControllersWithViews();
@@ -33,7 +40,7 @@ namespace Blog
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = @"C:\Users\Matthew\source\repos\Blog\Blog.Frontend\ClientApp\build";
+                configuration.RootPath = Path.Combine(solutionDirectoryFilePath, @"Blog.Frontend\ClientApp\build");
             });
 
             services.AddSimpleInjector(container, options =>
@@ -77,7 +84,7 @@ namespace Blog
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = @"C:\Users\Matthew\source\repos\Blog\Blog.Frontend\ClientApp";
+                spa.Options.SourcePath = Path.Combine(solutionDirectoryFilePath, @"Blog.Frontend\ClientApp");
 
                 if (env.IsDevelopment())
                 {
