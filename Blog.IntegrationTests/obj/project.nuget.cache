@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WUpioVSOZPJ0XiGWsQz97TkdLjtulLUptb/tmJDemB5HmZ6oVWN9Vicjm/M0OJYmbGm14W0dOm2y8iH561MKTw==",
+  "dgSpecHash": "Jn0XplKUmtGkJ0NhvKSI49kI/Qbim+KnnTBui0rQCRTDYwNccLT+y7RiPCH3Vu7bUnCvd0mTUxxPYIw+i/m1Rg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matthew\\source\\repos\\Blog\\Blog.IntegrationTests\\Blog.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -229,7 +229,8 @@
     "C:\\Users\\Matthew\\.nuget\\packages\\xunit.core\\2.4.0\\xunit.core.2.4.0.nupkg.sha512",
     "C:\\Users\\Matthew\\.nuget\\packages\\xunit.extensibility.core\\2.4.0\\xunit.extensibility.core.2.4.0.nupkg.sha512",
     "C:\\Users\\Matthew\\.nuget\\packages\\xunit.extensibility.execution\\2.4.0\\xunit.extensibility.execution.2.4.0.nupkg.sha512",
-    "C:\\Users\\Matthew\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.0\\xunit.runner.visualstudio.2.4.0.nupkg.sha512"
+    "C:\\Users\\Matthew\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.0\\xunit.runner.visualstudio.2.4.0.nupkg.sha512",
+    "C:\\Users\\Matthew\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
